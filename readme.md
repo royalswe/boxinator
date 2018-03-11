@@ -47,9 +47,17 @@ Run  **php artisan migrate**  to setup db migrations
 Run **php artisan db:seed** if you want to seed 5 db collections
 Run **php artisan serve** to start the application on port 8000, add port prefix to change port if needed **php artisan serve --port=8080**
 
-# Front-end
+# Front-end (React - Redux)
 
-  
+The directory boxinator-redux is the front-end and can moved out from the back-end project if desired.
+
+The api requests are hardcoded to port 8000 which is the default port for the backend.
+
+**npm install** to install all dependencies
+
+**npm start** to run the server on port 3000
+
+
 
   
 
