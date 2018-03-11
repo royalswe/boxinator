@@ -43,8 +43,11 @@ add your database details in .env file. (examples which part to modify bellow)
 
 
 Create a database with the same name you added in .env file above
+
 Run  **php artisan migrate**  to setup db migrations
+
 Run **php artisan db:seed** if you want to seed 5 db collections
+
 Run **php artisan serve** to start the application on port 8000, add port prefix to change port if needed **php artisan serve --port=8080**
 
 # Front-end (React - Redux)
