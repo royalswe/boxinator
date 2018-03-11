@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\Item;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,15 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('items', 'ItemsController@index');
+ 
+Route::post('item','ItemsController@store');
+
+// Route::get('items', function () {
+//     return response(Item::all(),200);
+// });
+
+// Route::post('item', function(Request $request) {
+//     $resp = Item::create($request->all());
+//     return $resp;
+// });
