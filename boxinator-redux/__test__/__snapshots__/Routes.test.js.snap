@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the navigation links 1`] = `
+<div>
+  <p
+    className="App-intro"
+  >
+    <Link
+      replace={false}
+      to="/"
+    >
+      Home
+    </Link>
+     | 
+    <Link
+      replace={false}
+      to="listboxes"
+    >
+      Box list
+    </Link>
+     | 
+    <Link
+      replace={false}
+      to="addbox"
+    >
+      Add new Box
+    </Link>
+  </p>
+  <Switch>
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/listboxes"
+    />
+    <Route
+      component={[Function]}
+      exact={true}
+      path="/addbox"
+    />
+    <Route
+      component={[Function]}
+      path="*"
+    />
+  </Switch>
+</div>
+`;

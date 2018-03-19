@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListItemsPage /> should render box items passes dispatch and getState to addBoxPage component 1`] = `
+<AddBoxPage
+  createItem={[Function]}
+  store={
+    Object {
+      "dispatch": [MockFunction] {
+        "calls": Array [
+          Array [
+            "ADD_ITEM_SUCCESS",
+          ],
+        ],
+      },
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+      },
+    }
+  }
+/>
+`;
+
+exports[`<ListItemsPage /> should render box items render the form in <AddBoxPage /> 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <h2>
+    Add new box
+  </h2>
+  <div
+    className="field"
+  >
+    <label
+      htmlFor="name"
+    >
+      Name
+    </label>
+    <input
+      id="name"
+      name="name"
+      onChange={[Function]}
+      value=""
+    />
+  </div>
+  <span />
+  <div>
+    <label
+      htmlFor="weight"
+    >
+      Weight
+    </label>
+    <input
+      id="weight"
+      name="weight"
+      onChange={[Function]}
+      value=""
+    />
+  </div>
+  <div>
+    <label
+      htmlFor="color"
+    >
+      Color
+    </label>
+    <input
+      id="color"
+      name="color"
+      onChange={[Function]}
+      value=""
+    />
+  </div>
+  <div>
+    <label
+      htmlFor="country"
+    >
+      Country
+    </label>
+    <input
+      id="country"
+      name="country"
+      onChange={[Function]}
+      value=""
+    />
+  </div>
+  <div>
+    <button>
+      Save
+    </button>
+  </div>
+</form>
+`;

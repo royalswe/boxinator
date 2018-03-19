@@ -5,13 +5,12 @@ import PropTypes from 'prop-types';
 import { fetchItems } from '../../actions/actions';
 
 
-class ListItemsPage extends React.Component {
+export class ListItemsPage extends React.Component {
   componentDidMount(){
     this.props.fetchItems();
   }
-  render() {
-    console.log(this.props.items);
-    
+
+  render() {    
     return (
       <div>
         <h1>Box List</h1>
@@ -24,7 +23,7 @@ class ListItemsPage extends React.Component {
 
 ListItemsPage.propTypes = {
   items: PropTypes.array.isRequired,
-  fetchItems: PropTypes.array.isRequired
+ // fetchItems: PropTypes.func.isRequired
 }
 
 function mapStateToProps(state) {

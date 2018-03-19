@@ -1,5 +1,6 @@
 /**
  * TODO:: Form and POST validation after backend validation is done
+ * exports AddBoxPage class only for testing purpose
  */
 
 import React from 'react';
@@ -7,7 +8,7 @@ import classnames from 'classnames';
 import { connect } from 'react-redux';
 import { createItem } from '../../actions/actions';
 
-class AddBoxPage extends React.Component {
+export class AddBoxPage extends React.Component {
 
     state = {
         name: '',

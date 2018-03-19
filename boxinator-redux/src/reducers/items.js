@@ -1,7 +1,7 @@
 import * as types from '../actions/actionTypes'; 
 
 export default function items(state = [], action = {}){
-    
+        
     switch(action.type){
         case types.LOAD_ITEMS_SUCCESS:
             return action.items;

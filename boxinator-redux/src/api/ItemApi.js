@@ -6,14 +6,15 @@
 class ItemApi { 
 
     static getAllItems() {
-      return fetch('http://localhost:8000/api/items').then(response => {
+      return fetch('http://localhost:8000/api/items').then(response => {   
         return response.json();
       }).catch(error => {
-        return error;
+        throw error;
       });
     }
 
     static createItem(data) {
+      console.log(data);
       const request = new Request('http://localhost:8000/api/item', {
         method: 'POST',
         headers: new Headers({

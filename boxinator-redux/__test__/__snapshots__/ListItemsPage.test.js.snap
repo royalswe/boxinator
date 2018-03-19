@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListItemsPage /> should render box items Should render a table including it´s data and content 1`] = `
+<div>
+  <h1>
+    Box List
+  </h1>
+  <div>
+    <table>
+      <tbody>
+        <tr
+          class="list-group"
+        >
+          <th>
+            Roy
+          </th>
+          <th>
+            45.00
+          </th>
+          <th
+            style="background-color:rgb(255, 0, 0)"
+          >
+            rgb(255, 0, 0)
+          </th>
+          <th>
+            Sweden
+          </th>
+        </tr>
+        <tr
+          class="list-group"
+        >
+          <th>
+            Bradley
+          </th>
+          <th>
+            8.00
+          </th>
+          <th
+            style="background-color:rgb(78,40,24)"
+          >
+            rgb(78,40,24)
+          </th>
+          <th>
+            China
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;

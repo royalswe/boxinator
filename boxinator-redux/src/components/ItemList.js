@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export default function ItemList({ items }) {
+    /**
+     * Renders if items collection is empty
+     */
     const emptyMessage = (
       <p>There are no boxes in collection.</p>
     );
@@ -31,10 +34,10 @@ export default function ItemList({ items }) {
         </tbody>
       </table> 
     );
-
+    
     return (
       <div>
-        {items ? itemList : emptyMessage}
+        {items.length > 0 ? itemList : emptyMessage}
       </div>
     );
   }
