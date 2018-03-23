@@ -18,8 +18,8 @@ class CreateItemsTable extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('color');
-            $table->string('country');
-            $table->decimal('weight', 8, 2);
+            $table->decimal('ShippingCost', 8, 2);
+            $table->integer('weight');
         });
     }
 

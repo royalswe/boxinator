@@ -17,12 +17,3 @@ use App\Item;
 Route::get('items', 'ItemsController@index');
  
 Route::post('item','ItemsController@store');
-
-// Route::get('items', function () {
-//     return response(Item::all(),200);
-// });
-
-// Route::post('item', function(Request $request) {
-//     $resp = Item::create($request->all());
-//     return $resp;
-// });
