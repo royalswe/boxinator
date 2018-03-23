@@ -15,15 +15,13 @@ exports[`<ListItemsPage /> should render box items Should render a table includi
             Roy
           </th>
           <th>
-            45.00
+            45.00 kilograms
           </th>
           <th
             style="background-color:rgb(255, 0, 0)"
-          >
-            rgb(255, 0, 0)
-          </th>
+          />
           <th>
-            Sweden
+             SEK
           </th>
         </tr>
         <tr
@@ -33,18 +31,26 @@ exports[`<ListItemsPage /> should render box items Should render a table includi
             Bradley
           </th>
           <th>
-            8.00
+            8.00 kilograms
           </th>
           <th
             style="background-color:rgb(78,40,24)"
-          >
-            rgb(78,40,24)
-          </th>
+          />
           <th>
-            China
+             SEK
           </th>
         </tr>
       </tbody>
+      <tfoot>
+        <tr>
+          <th>
+            045.008.00
+          </th>
+          <th>
+            NaN
+          </th>
+        </tr>
+      </tfoot>
     </table>
   </div>
 </div>

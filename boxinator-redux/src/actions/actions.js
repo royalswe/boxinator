@@ -1,7 +1,3 @@
-/**
- * TODO:: Bether error handling
- */
-
 import * as types from '../actions/actionTypes'; 
 import ItemApi from '../api/ItemApi';
 
@@ -36,11 +32,10 @@ export function fetchItems() {
  * Send POST request to create new box
  */
 export function createItem(item) {  
-  console.log(item);
   return dispatch => {
     return ItemApi.createItem(item).then(response => {   
       dispatch(createItemSuccess(response));
-      return response;
+      return response
     }).catch(error => {
       throw(error);
     });

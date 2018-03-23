@@ -3,7 +3,6 @@ import { ListItemsPage } from '../src/components/views/ListItemsPage';
 import { shallow, mount, render } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import configureStore from 'redux-mock-store';
-import sinon from 'sinon';
 import { boxCollections } from './collections'
 
 describe('<ListItemsPage /> should render box items', () => {

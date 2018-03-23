@@ -21,16 +21,23 @@ export default function ItemList({ items }) {
               {item.name}
             </th>
             <th>
-              {item.weight}
+              {item.weight} kilograms
             </th>
             <th style={{backgroundColor: item.color}}>
-              {item.color}
             </th>
             <th>
-              {item.country}
+              {item.ShippingCost} SEK
             </th>
           </tr>
         )}
+          <tfoot>
+            <th>
+              { items.map(w => w.weight).reduce((total, weight) => total + weight, 0) }
+            </th>
+            <th>
+              { items.map(w => w.ShippingCost).reduce((total, cost) => total + Math.round(cost), 0) }
+            </th>
+         </tfoot>
         </tbody>
       </table> 
     );

@@ -24,71 +24,146 @@ exports[`<ListItemsPage /> should render box items passes dispatch and getState 
 `;
 
 exports[`<ListItemsPage /> should render box items render the form in <AddBoxPage /> 1`] = `
-<form
-  onSubmit={[Function]}
->
-  <h2>
-    Add new box
-  </h2>
-  <div
-    className="field"
+<div>
+  <form
+    className="add-box"
+    onSubmit={[Function]}
   >
-    <label
-      htmlFor="name"
-    >
-      Name
-    </label>
-    <input
-      id="name"
-      name="name"
-      onChange={[Function]}
-      value=""
+    <h2>
+      Add new box
+    </h2>
+    <span
+      className="error-text"
     />
-  </div>
-  <span />
-  <div>
-    <label
-      htmlFor="weight"
+    <div
+      className="field"
     >
-      Weight
-    </label>
-    <input
-      id="weight"
-      name="weight"
-      onChange={[Function]}
-      value=""
+      <label
+        htmlFor="name"
+      >
+        Name
+      </label>
+      <input
+        id="name"
+        name="name"
+        onChange={[Function]}
+        required={true}
+        value=""
+      />
+    </div>
+    <span
+      className="error-text"
     />
-  </div>
-  <div>
-    <label
-      htmlFor="color"
+    <div
+      className="field"
     >
-      Color
-    </label>
-    <input
-      id="color"
-      name="color"
-      onChange={[Function]}
-      value=""
+      <label
+        htmlFor="weight"
+      >
+        Weight
+      </label>
+      <input
+        id="weight"
+        name="weight"
+        onChange={[Function]}
+        required={true}
+        type="number"
+        value=""
+      />
+    </div>
+    <span
+      className="error-text"
     />
-  </div>
-  <div>
-    <label
-      htmlFor="country"
+    <div
+      className="field"
     >
-      Country
-    </label>
-    <input
-      id="country"
-      name="country"
-      onChange={[Function]}
-      value=""
+      <label
+        htmlFor="country"
+      >
+        Destination Country
+      </label>
+      <select
+        name="country"
+        onChange={[Function]}
+        value="Sweden"
+      >
+        <option
+          key="Sweden"
+          value="Sweden"
+        >
+          Sweden
+        </option>
+        <option
+          key="China"
+          value="China"
+        >
+          China
+        </option>
+        <option
+          key="Brazil"
+          value="Brazil"
+        >
+          Brazil
+        </option>
+        <option
+          key="Australia"
+          value="Australia"
+        >
+          Australia
+        </option>
+      </select>
+    </div>
+    <span
+      className="error-text"
     />
-  </div>
-  <div>
-    <button>
-      Save
-    </button>
-  </div>
-</form>
+    <div
+      className="field"
+    >
+      <div>
+        Box Color
+      </div>
+      <div
+        onClick={[Function]}
+        style={
+          Object {
+            "MozBorderRadius": "1px",
+            "MozBoxShadow": "0 0 0 1px rgba(0,0,0,.1)",
+            "OBorderRadius": "1px",
+            "OBoxShadow": "0 0 0 1px rgba(0,0,0,.1)",
+            "WebkitBorderRadius": "1px",
+            "WebkitBoxShadow": "0 0 0 1px rgba(0,0,0,.1)",
+            "background": "#fff",
+            "borderRadius": "1px",
+            "boxShadow": "0 0 0 1px rgba(0,0,0,.1)",
+            "cursor": "pointer",
+            "display": "inline-block",
+            "msBorderRadius": "1px",
+            "msBoxShadow": "0 0 0 1px rgba(0,0,0,.1)",
+            "padding": "5px",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "MozBorderRadius": "2px",
+              "OBorderRadius": "2px",
+              "WebkitBorderRadius": "2px",
+              "background": "rgb(241, 112, 0)",
+              "borderRadius": "2px",
+              "height": "14px",
+              "msBorderRadius": "2px",
+              "width": "36px",
+            }
+          }
+        />
+      </div>
+    </div>
+    <div>
+      <button>
+        Save
+      </button>
+    </div>
+  </form>
+</div>
 `;
