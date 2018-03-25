@@ -44,6 +44,8 @@ add your database details in .env file. (examples which part to modify bellow)
 
 Create a database with the same name you added in .env file above
 
+Run **composer update** to update depencencies specified in composer.json
+
 Run  **php artisan migrate**  to setup db migrations
 
 Run **php artisan db:seed** if you want to seed 5 db collections
