@@ -50,6 +50,8 @@ Run **php artisan db:seed** if you want to seed 5 db collections
 
 Run **php artisan serve** to start the application on port 8000, add port prefix to change port if needed **php artisan serve --port=8080**
 
+Run **./vendor/bin/phpunit** to run the tests
+
 # Front-end (React - Redux)
 
 The directory boxinator-redux is the front-end and can moved out from the back-end project if desired.

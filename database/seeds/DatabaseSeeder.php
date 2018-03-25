@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
             Item::create([
                 'name' => $faker->firstName,
                 'color' => $faker->rgbCssColor,
-                'country' => 'Sweden',
+                'ShippingCost' => $faker->randomNumber(2),
                 'weight' => $faker->randomNumber(2)
             ]);
         }
