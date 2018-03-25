@@ -12,7 +12,7 @@ export class ListItemsPage extends React.Component {
 
   render() {    
     return (
-      <div>
+      <div className="box-list">
         <h1>Box List</h1>
         <ItemList items={this.props.items} />
       </div>
@@ -23,7 +23,7 @@ export class ListItemsPage extends React.Component {
 
 ListItemsPage.propTypes = {
   items: PropTypes.array.isRequired,
- // fetchItems: PropTypes.func.isRequired
+  fetchItems: PropTypes.func.isRequired
 }
 
 function mapStateToProps(state) {

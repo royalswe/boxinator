@@ -95,7 +95,7 @@ export class AddBoxPage extends React.Component {
                     displayMessage: <p className="box-created-successfully">Box is succesfully created!</p>,
                     errors: {}
                 });
-                setTimeout(() => { // show success message for 4 seconds
+                setTimeout(() => { // remove success message after 4 seconds
                     this.setState({displayMessage: false})
                   }, 4000);
 

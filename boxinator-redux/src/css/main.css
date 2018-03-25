@@ -9,8 +9,8 @@ body {
 }
 .App-logo {
   position: relative;
-  -webkit-animation: App-logo-animate 0.4s;
-  animation: App-logo-animate 0.4s;
+  -webkit-animation: bottom-up-animate 0.8s;
+  animation: bottom-up-animate 0.8s;
   height: 80px;
 }
 .App-header {
@@ -24,26 +24,6 @@ body {
 }
 .App-intro {
   font-size: large;
-}
-@-webkit-keyframes App-logo-animate {
-  from {
-    margin-bottom: -300px;
-    opacity: 0;
-  }
-  to {
-    margin-bottom: 0px;
-    opacity: 1;
-  }
-}
-@keyframes App-logo-animate {
-  from {
-    margin-bottom: -300px;
-    opacity: 0;
-  }
-  to {
-    margin-bottom: 0;
-    opacity: 1;
-  }
 }
 /**** Page with rendered list of boxes ****/
 table {
@@ -128,15 +108,137 @@ form.add-box input[type="submit"]:hover,
 form.add-box button:hover {
   background: #2EC929;
 }
+.box-create-fail,
 .box-created-successfully {
   font-size: 17px;
-  background: #196815;
-  color: #21fe24;
   padding: 12px;
 }
+.box-created-successfully {
+  background: #196815;
+  color: #21fe24;
+  -webkit-animation: fading-in-out-animate 4s;
+  animation: fading-in-out-animate 4s;
+}
 .box-create-fail {
-  font-size: 17px;
   background: #ca0000;
   color: #ffffff;
   padding: 12px;
+  -webkit-animation: bottom-up-animate 0.8s;
+  animation: bottom-up-animate 0.8s;
+}
+/** List table **/
+.box-list {
+  padding: 1em;
+}
+table {
+  border: none;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+table tr {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+table tr:last-child {
+  background: #dbdbdb;
+  border: none;
+  padding: .35em;
+}
+table tr:last-child th:nth-child(3),
+table tr:last-child th:first-child {
+  background: #ffffff;
+  border: none;
+}
+table th {
+  padding: .625em;
+  text-align: center;
+}
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+}
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+  table caption {
+    font-size: 1.3em;
+  }
+  table thead {
+    border: none;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  table tr:last-child th {
+    border: none;
+  }
+  table tr:last-child th:nth-child(3):before,
+  table tr:last-child th:first-child:before {
+    content: "Total:";
+  }
+}
+@-webkit-keyframes bottom-up-animate {
+  from {
+    margin-bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    margin-bottom: 0px;
+    opacity: 1;
+  }
+}
+@keyframes bottom-up-animate {
+  from {
+    margin-bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    margin-bottom: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fading-in-out-animate {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fading-in-out-animate {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

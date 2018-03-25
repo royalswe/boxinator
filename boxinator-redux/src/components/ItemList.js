@@ -16,7 +16,7 @@ export default function ItemList({ items }) {
       <table>
         <tbody>
         {items.map(item => 
-          <tr className="list-group" key={item.id}>
+          <tr key={item.id}>
             <th>
               {item.name}
             </th>
@@ -30,14 +30,16 @@ export default function ItemList({ items }) {
             </th>
           </tr>
         )}
-          <tfoot>
+          <tr>
+            <th></th>
             <th>
-              { items.map(w => w.weight).reduce((total, weight) => total + weight, 0) }
+              { items.map(w => w.weight).reduce((total, weight) => total + weight, 0) } Kilogram
             </th>
+            <th></th>
             <th>
-              { items.map(w => w.ShippingCost).reduce((total, cost) => total + Math.round(cost), 0) }
+              { items.map(w => w.ShippingCost).reduce((total, cost) => total + Math.round(cost), 0) } SEK
             </th>
-         </tfoot>
+          </tr>
         </tbody>
       </table> 
     );
