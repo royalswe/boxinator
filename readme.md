@@ -64,6 +64,7 @@ The api requests are hardcoded to port 8000 which is the default port for the ba
 
 **npm start** to run the server on port 3000
 
+**npm test --silent** to run tests without console output
 
 
   
