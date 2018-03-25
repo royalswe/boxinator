@@ -35,9 +35,7 @@ exports[`<ListItemsPage /> should render box items render the form in <AddBoxPag
     <span
       className="error-text"
     />
-    <div
-      className="field"
-    >
+    <div>
       <label
         htmlFor="name"
       >
@@ -54,9 +52,7 @@ exports[`<ListItemsPage /> should render box items render the form in <AddBoxPag
     <span
       className="error-text"
     />
-    <div
-      className="field"
-    >
+    <div>
       <label
         htmlFor="weight"
       >
@@ -74,9 +70,7 @@ exports[`<ListItemsPage /> should render box items render the form in <AddBoxPag
     <span
       className="error-text"
     />
-    <div
-      className="field"
-    >
+    <div>
       <label
         htmlFor="country"
       >
@@ -116,9 +110,7 @@ exports[`<ListItemsPage /> should render box items render the form in <AddBoxPag
     <span
       className="error-text"
     />
-    <div
-      className="field"
-    >
+    <div>
       <div>
         Box Color
       </div>

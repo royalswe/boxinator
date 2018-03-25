@@ -4,7 +4,10 @@ class HomePage extends React.Component {
 
     render() {
         return (
-            <h2>Welcome to Boxinator!</h2>
+            <div>
+                <h2>Welcome to Boxinator!</h2>
+                <p>This is a simple application build with React and Redux</p>
+            </div>
         )
     }
 }

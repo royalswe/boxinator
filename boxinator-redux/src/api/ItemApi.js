@@ -1,12 +1,12 @@
 /**
  * All API requests is located here
- * TODO:: remove hard coded url
  */
+import * as API from '../constants'; 
 
 class ItemApi { 
 
-  static getAllItems() {
-    return fetch('http://localhost:8000/api/items').then(response => {   
+  static getAllItems() {    
+    return fetch(API.GET_ITEMS_URL).then(response => {   
       return response.json();
     }).catch(error => {
       throw error;
@@ -14,7 +14,7 @@ class ItemApi {
   }
 
   static createItem(data) {
-    return fetch('http://localhost:8000/api/item', {
+    return fetch(API.POST_ITEM_URL, {
       method: 'POST',
       body: JSON.stringify(data),
       headers: {

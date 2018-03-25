@@ -3,7 +3,7 @@ import React from 'react';
 class HomePage extends React.Component {
 
     render() {
-        // Just a temporary 404 page
+        // Just a simple 404 page
         return (
             <div>
                 <h2>404</h2> 

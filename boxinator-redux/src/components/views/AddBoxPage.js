@@ -1,10 +1,7 @@
 /**
- * TODO:: backend validation should render it's error messages and not a default error.
- * find out what is considered blue color.
- * exports AddBoxPage class only for testing purpose.
+ * TODO::find out what is considered blue color.
  */
 import React from 'react';
-import classnames from 'classnames';
 import reactCSS from 'reactcss'
 import { connect } from 'react-redux';
 import { createItem } from '../../actions/actions';
@@ -14,7 +11,7 @@ export class AddBoxPage extends React.Component {
 
     state = {
         name: '',
-        color: {r:241, g:112, b:0}, // default color
+        color: {r:241, g:112, b:0}, // orange as default color
         weight: '',
         country: 'Sweden',
         displayColorPicker: false,
@@ -26,7 +23,7 @@ export class AddBoxPage extends React.Component {
         /**
          * If there is any validation errors,
          * validation errors removes when it is valid
-         */
+         */        
         if (!!this.state.errors[e.target.name]) {
           let errors = Object.assign({}, this.state.errors);      
           delete errors[e.target.name];
@@ -69,7 +66,7 @@ export class AddBoxPage extends React.Component {
          * custom error messages
          */
         let errors = {};
-        if(this.state.name === '') errors.receiver = "Name can't be empty";
+        if(this.state.name === '') errors.name = "Name can't be empty";
         if(this.state.country === '') errors.color = "Country can't be empty";
         if(this.state.weight === '') errors.weight = "Weight can't be empty";
         if(this.state.weight < 0) {
@@ -82,7 +79,7 @@ export class AddBoxPage extends React.Component {
          */
         this.setState({errors});
         const isValid = Object.keys(errors).length === 0;
-        if(isValid){ // if form dont have errors
+        if(isValid){ // if form dont have errors then a POST request will be made
             const color = `rgb(${this.state.color.r}, ${this.state.color.g}, ${this.state.color.b})`;
             const { name, weight, country } = this.state;
 
@@ -100,7 +97,6 @@ export class AddBoxPage extends React.Component {
                   }, 4000);
 
               }).catch(errors => {
-                console.log(errors.message);
                 this.setState({displayMessage: <p className="box-create-fail">{errors.message}</p>});
               });         
         }
@@ -148,8 +144,8 @@ export class AddBoxPage extends React.Component {
                 <form className="add-box" onSubmit={this.handleSubmit}>
                     <h2>Add new box</h2>
             
-                    <span className="error-text">{this.state.errors.receiver}</span>
-                    <div className={classnames('field', { error: !!this.state.errors.receiver})}>
+                    <span className="error-text">{this.state.errors.name}</span>
+                    <div>
                         <label htmlFor="name">Name</label>
                         <input
                             name="name"
@@ -161,7 +157,7 @@ export class AddBoxPage extends React.Component {
                     </div>
 
                     <span className="error-text">{this.state.errors.weight}</span>
-                    <div className={classnames('field', { error: !!this.state.errors.weight})}>
+                    <div>
                         <label htmlFor="weight">Weight</label>
                         <input
                             name="weight"
@@ -174,7 +170,7 @@ export class AddBoxPage extends React.Component {
                     </div>
 
                     <span className="error-text" >{this.state.errors.country}</span>
-                    <div className={classnames('field', { error: !!this.state.errors.country})}>
+                    <div>
                         <label htmlFor="country">Destination Country</label>
                         <select ref="countries" name="country" value={this.state.country} onChange={this.handleChange}>
                             {countryOptions}
@@ -182,7 +178,7 @@ export class AddBoxPage extends React.Component {
                     </div>
 
                     <span className="error-text">{this.state.errors.color}</span> 
-                    <div className={classnames('field', { error: !!this.state.errors.color})}>
+                    <div>
                         <div>Box Color</div>
                         <div style={ styles.swatch } onClick={ this.handleColorClick }>
                         <div style={ styles.color } />

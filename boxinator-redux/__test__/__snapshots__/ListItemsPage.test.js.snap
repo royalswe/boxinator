@@ -1,16 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<ListItemsPage /> should render box items Should render a table including it´s data and content 1`] = `
-<div>
+<div
+  class="box-list"
+>
   <h1>
     Box List
   </h1>
   <div>
     <table>
       <tbody>
-        <tr
-          class="list-group"
-        >
+        <tr>
           <th>
             Roy
           </th>
@@ -24,9 +24,7 @@ exports[`<ListItemsPage /> should render box items Should render a table includi
              SEK
           </th>
         </tr>
-        <tr
-          class="list-group"
-        >
+        <tr>
           <th>
             Bradley
           </th>
@@ -40,17 +38,17 @@ exports[`<ListItemsPage /> should render box items Should render a table includi
              SEK
           </th>
         </tr>
-      </tbody>
-      <tfoot>
         <tr>
+          <th />
           <th>
-            045.008.00
+            045.008.00 Kilogram
           </th>
+          <th />
           <th>
-            NaN
+            NaN SEK
           </th>
         </tr>
-      </tfoot>
+      </tbody>
     </table>
   </div>
 </div>

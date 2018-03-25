@@ -7,8 +7,6 @@ import { boxCollections } from './collections'
 
 describe('<ListItemsPage /> should render box items', () => {
 
-  // beforeEach(()=>{  })
-
   it('Get notified if no boxes exists', () => {
     const wrapper = render(<ListItemsPage items={ [] }/>);
     expect(wrapper.find('p').text()).toEqual('There are no boxes in collection.');

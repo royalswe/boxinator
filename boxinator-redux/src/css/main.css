@@ -79,12 +79,6 @@ form.add-box select {
 }
 form.add-box input:focus,
 form.add-box textarea:focus,
-form.add-box select:focus,
-form.add-box input:focus,
-form.add-box textarea:focus,
-form.add-box select:focus,
-form.add-box input:focus,
-form.add-box textarea:focus,
 form.add-box select:focus {
   box-shadow: 0 0 5px #3DAD3A;
   padding: 3%;
