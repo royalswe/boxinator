@@ -1,5 +1,7 @@
 
-  # Back-end
+# This is a simple application what purpose was to learn react and redux in a short time.
+  
+# Back-end
 
 <p  align="center"><img  src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
